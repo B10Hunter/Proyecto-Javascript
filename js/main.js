@@ -48,3 +48,6 @@ switch(operacion) {
         alert("Operacion no valida")
         break
 }
+
+const extra = [usurario1]
+console.log(extra)
