@@ -1,0 +1,15 @@
+
+.texTitle {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(197, 197, 197);
+}
+
+.marcoColor {
+    border-radius: 40px;
+    border: 4px groove rgb(226, 185, 82);
+    width: 72px;
+}
+
+.tamañoTex {
+    font-size: 11px;
+}
