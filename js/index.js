@@ -41,12 +41,12 @@ botonAlert.addEventListener('click', () => {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Tu usario es</h5>
+              <h5 class="modal-title " id="staticBackdropLabel">Tu usario es</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p class="tamañoTex text-dark"> Tu nombre es : ${persona.username}<br><br>
-               Tu Email es : ${persona.email} </p>
+              <p class="tamañoTex  m-1 text-dark"> Tu nombre es :  <br><br>
+               Tu Email es : </p>
             </div>
           </div>
         </div>
