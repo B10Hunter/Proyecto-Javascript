@@ -32,26 +32,14 @@ form.addEventListener('submit', (event) => {
         localStorage.setItem('persona', JSON.stringify(persona))
     }
   
-})
-botonAlert.addEventListener('click', () => {
-    let arraytStorage = JSON.parse(localStorage.getItem('persona'))
+    const inf = document.getElementById('contenido')
+     
+    inf.innerHTML = ""
+    inf.innerHTML += `
+    <p class= "tamañoTex">Tu nombre es: ${username} . <br><br>
+        Tu emai: ${email} .</p>`
 
-    arraytStorage.forEach((persona, indice) => {
-        form.innerHTML += `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title " id="staticBackdropLabel">Tu usario es</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p class="tamañoTex  m-1 text-dark"> Tu nombre es :  <br><br>
-               Tu Email es : </p>
-            </div>
-          </div>
-        </div>
-      </div>
-        `
-         
-    });
-})
+        
+  })
+  
+   
