@@ -32,101 +32,45 @@
                       <span class="visually-hidden">(current)</span>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Zapatillas</a>
+                  <li class="nav-item mx-2">
+                    <button type="button" class="btn btn-outline-secondary"  id="botonZapa">Zapatillas</button>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Ropa</a>
+                  <li class="nav-item mx-2">
+                    <button type="button" class="btn btn-outline-secondary" id="botonReme">Remera</button>
                   </li>
                  
                 </ul>
                 <button class="btn btn-secondary me-3" type="submit"> <i class="fas fa-shopping-cart"></i></button>
-                <form class="d-flex ">
-                <input class="form-control me-sm-2" type="text" placeholder="......">
-                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
+                  <div class="infoDePersoanje">
+                    <form class="d-flex " id="formPersonaje">
+                      <input id="search" class="form-control me-sm-2" name="persoanjes" type="text"  placeholder="......">
+                      <button class="btn btn-secondary my-2 my-sm-0"  id="botonBusq" type="submit">Buscar</button>
+                  </div>
               </div>
             </div>
           </nav>
     </header>
     <main>
-         <div class=" d-flex justify-content-center">
-                    <p class="h1 text-white">Zapatillas</p>
-                 </div>
-        <div class="d-flex flex-content justify-content-center ">
-             <div class="card flex-item me-3 border-primary  " style="max-width: 20rem;">
-              <div class=" btn-outline-primary d-flex justify-content-center ">
-                <h3 class="mx-5 pt-3 ">Adidas</h3>
-                <img class="mx-5 btn-outline-primary me-auto" src="./img/addidas.png" alt="addidas" srcset="" width="70px" height="60px">
-                
-              </div>
-                <div class="card-body">
-               <h6 class="card-title " id="indice1">Zapatillas runnig Adidas galaxy 5 azul</h6>
-               <div class="btn-outline-light ">
-                    <img src="./img/azul.jpg" alt="azul" width="100%" height="250px">
-               </div>
-              </div>
-               <div class=" mb-2" >
-                <button type="button" class="btn btn-outline-primary mx-3" id="botonCarrito" >Agregar al carrito</button>
-                <button type="button" class="btn btn-outline-light" id="botonCompra" >Comprar</button>
-               </div>
-            </div> 
-
-            <div class="card flex-item me-3  border-primary  " style="max-width: 20rem;">
-                <div class=" btn-outline-primary d-flex justify-content-center ">
-                  <h3 class="mx-5 pt-3 ">Adidas</h3>
-                  <img class="mx-5 btn-outline-primary me-auto" src="./img/addidas.png" alt="addidas" srcset="" width="70px" height="60px">
-                  
-                </div>
-                  <div class="card-body">
-                 <h6 class="card-title " id="indice1">Zapatillas runnig Adidas blancas</h6>
-                 <div class="btn-outline-light ">
-                      <img src="./img/zapatillas-adidas-breaknet-ni_o-ni_a-blanca-100010fy9506001-1.jpg" alt="azul" width="100%" height="250px">
-                 </div>
-                </div>
-                 <div class=" mb-2" >
-                  <button type="button" class="btn btn-outline-primary mx-3 botonCarrito" id="botonCarrito" >Agregar al carrito</button>
-                  <button type="button" class="btn btn-outline-light botonCompra" id="botonCompra" >Comprar</button>
-                 </div>
-              </div> 
-        
-              <div class="card flex-item me-3  border-primary  " style="max-width: 20rem;">
-                <div class=" btn-outline-primary d-flex justify-content-center ">
-                  <h3 class="mx-5 pt-3 ">Nike</h3>
-                  <img class="mx-5 btn-outline-primary me-auto" src="./img/nike.png" alt="addidas" srcset="" width="90px" height="60px">
-                  
-                </div>
-                  <div class="card-body">
-                 <h6 class="card-title " id="indice1">Zapatillas Nike air max negras</h6>
-                 <div class="btn-outline-light ">
-                      <img src="./img/zapatillas-nike-air-max-sc-negras-510010cw4555002-1.jpg" alt="azul" width="100%" height="250px">
-                 </div>
-                </div>
-                 <div class=" mb-2" >
-                  <button type="button" class="btn btn-outline-primary mx-3" id="botonCarrito" >Agregar al carrito</button>
-                  <button type="button" class="btn btn-outline-light" id="botonCompra" >Comprar</button>
-                 </div>
-              </div> 
-              <div class="card flex-item  border-primary  " style="max-width: 20rem;">
-                  <div class=" btn-outline-primary d-flex justify-content-center ">
-                    <h3 class="mx-5 pt-3 ">Nike</h3>
-                    <img class="mx-5 btn-outline-primary me-auto" src="./img/nike.png" alt="addidas" srcset="" width="90px" height="60px">
-                    
-                  </div>
-                    <div class="card-body">
-                   <h6 class="card-title " id="indice1">Zapatillas runnig Nike air zoom gris</h6>
-                   <div class="btn-outline-light ">
-                        <img src="./img/zapatillas-running-nike-air-zoom-winflo-8-gris-510010cw3419010-1.jpg" alt="azul" width="100%" height="250px">
-                   </div>
-                  </div>
-                   <div class=" mb-2" >
-                    <button type="button" class="btn btn-outline-primary mx-3" id="botonCarrito" >Agregar al carrito</button>
-                    <button type="button" class="btn btn-outline-light" id="botonCompra" >Comprar</button>
-                   </div>
-                </div> 
+        <div class=" d-flex justify-content-center">
+           <p class="h1 text-white">Todos los productos</p>
         </div>
+        <div class="container justify-content-center " id="todo">
+
+          <div class="row articulos" id="remeras"></div>
+
+          <div class="row articulos" id="zapatillas">  </div>  
           
-          
+        </div> 
+
+        <div class="container justify-content-center " id="">
+            <div class="row" id="divZapa">  </div>    
+        </div>
+        <div class="container justify-content-center " id="">
+          <div class="row" id="divRemera">  </div>    
+      </div>
+        <div id="cosa"> </div>
+        
+        
     </main>
     <footer>
 
