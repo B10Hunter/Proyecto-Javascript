@@ -1,3 +1,4 @@
+//creando los indices
 const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
@@ -7,7 +8,7 @@ const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito ={}
 
-
+//Creamos el LocalStorage para los productos 
 document,addEventListener('DOMContentLoaded', () =>{
     fetchData()
     if(localStorage.getItem('carrito')){
@@ -22,18 +23,17 @@ cards.addEventListener('click', e =>{
 items.addEventListener('click', e =>{
     btnAccion(e)
 })
-
+//Creamos la "fetchDate" para la Api , para resivir los productos guardados
 const fetchData = async () => {
     try {
         const res = await fetch ('../api/api.json')
         const data = await res.json()
-        //console.log(data)
         pintarCards(data)
     } catch (error){
         console.log(error)
     }
 }
-
+//contenedor de los productos
 const pintarCards = data => {
     data.forEach(producto =>{
         templateCard.querySelector('h5').textContent = producto.nombre
@@ -52,7 +52,7 @@ const addCarrito = e => {
      e.stopPropagation()
 }
 const setCarrito = objeto =>{
-    const producto = {
+    const producto = {//definimos su nombre ,id , precio y cantidad(Stock)
         id: objeto.querySelector('button').dataset.id,
         nombre : objeto.querySelector('h5').textContent,
         precio : objeto.querySelector('p').textContent,
@@ -64,7 +64,7 @@ const setCarrito = objeto =>{
     carrito[producto.id] ={...producto}
     pintarCarrito()
 }
-const pintarCarrito = () =>{
+const pintarCarrito = () =>{//depende el producto que eligas ,se crear el producto en el carrito
     items.innerHTML = ''
     console.log(carrito)
     Object.values(carrito).forEach(producto =>{
@@ -79,7 +79,7 @@ const pintarCarrito = () =>{
     })
     items.appendChild(fragment)
     pintarFooter()
-    localStorage.setItem('carrito', JSON.stringify(carrito))
+    localStorage.setItem('carrito', JSON.stringify(carrito))//cuando se haga esta fucion , guardamos los productos en el carrito
 }
 const pintarFooter = () =>{
     footer.innerHTML = ''
@@ -98,7 +98,7 @@ const pintarFooter = () =>{
 
     footer.appendChild(fragment)
 
-    const btnVaciar = document.getElementById('vaciar-carrito')
+    const btnVaciar = document.getElementById('vaciar-carrito')//Funcion de bnt"Vaciar todo",borra los productos
     btnVaciar.addEventListener('click', () =>{
         carrito = {}
         pintarCarrito()
@@ -107,13 +107,13 @@ const pintarFooter = () =>{
 }
 
 const btnAccion = e => {
-    if(e.target.classList.contains('btn-info')){
+    if(e.target.classList.contains('btn-info')){//btn de sumar producto
         const producto = carrito[e.target.dataset.id]
         producto.cantidad++
         carrito[e.target.dataset.id] = {...producto}
         pintarCarrito()
     }
-    if (e.target.classList.contains('btn-danger')){
+    if (e.target.classList.contains('btn-danger')){//btn de restar productos
         const producto = carrito[e.target.dataset.id]
         producto.cantidad--
          if(producto.cantidad === 0){
