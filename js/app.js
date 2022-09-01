@@ -26,7 +26,7 @@ items.addEventListener('click', e =>{
 //Creamos la "fetchDate" para la Api , para resivir los productos guardados
 const fetchData = async () => {
     try {
-        const res = await fetch ('../api/api.json')
+        const res = await fetch ('../api.json')
         const data = await res.json()
         pintarCards(data)
     } catch (error){
